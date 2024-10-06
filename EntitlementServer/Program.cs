@@ -51,7 +51,7 @@ namespace EntitlementServer {
                         break;
                     case "/api/entitlement/add":
                         try {
-                            if (request.HttpMethod != "GET") {
+                            if (request.HttpMethod != "POST") {
                                 SendAndClose("Bad Request", 400);
                             } else {    
                                 var body = GetRequestBody<Json.CheckEntitlementRequest>();
